@@ -29,7 +29,9 @@
       #cover,
       #nhan-n-my,
       #links {
+        /*
         border: 1px solid red;
+        */
       }
 
       body {
@@ -46,9 +48,9 @@
       }
       #cover {
         grid-area: a;
-        width: 100%;
-        max-width: 40vw;
+        width: min(33vw, 60vh);
         align-self: center;
+        justify-self: center;
       }
       #nhan-n-my {
         grid-area: b;
@@ -74,6 +76,7 @@
         font-weight: bold;
         border: 0.2rem solid var(--links);
         padding: 0.5rem 1rem;
+
         display: flex;
         align-items: baseline;
         gap: 0.5rem;
@@ -84,6 +87,26 @@
       }
       #links .map-marker {
         font-size: 0.8em;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          display: block;
+          text-align: center;
+          padding-top: 1rem;
+        }
+        #cover {
+          width: min(100%, 60vh);
+        }
+        #nhan-n-my {
+          font-size: 15vw;
+        }
+        #links {
+          margin: 1.5rem;
+          flex-direction: column;
+          font-size: 1.5rem;
+          text-align: center;
+        }
       }
     </style>
 
@@ -102,18 +125,18 @@
   </head>
   <body>
     <span id="nhan-n-my">Nhân & My</span>
+    <img id="cover" src="/cover.png" alt="" />
     <div id="links">
-      <a href="/">
-        <span class="material-symbols-outlined map-marker"> location_on </span>
-        Sài Gòn
-      </a>
       <a href="/">
         <span class="material-symbols-outlined map-marker"> location_on </span>
         Hà Nội
       </a>
+      <a href="/">
+        <span class="material-symbols-outlined map-marker"> location_on </span>
+        Sài Gòn
+      </a>
       <a href="/">Ảnh cưới</a>
       <a href="/">Lời chúc</a>
     </div>
-    <img id="cover" src="/cover.png" alt="" />
   </body>
 </html>
