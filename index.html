@@ -4,22 +4,116 @@
     <meta charset="utf-8" />
     <title>N.o.v.e.m.b.e.r.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <h1>Đi chỗ khác chơi.</h1>
     <style>
       :root {
-        background-color: black;
-        color: white;
+        --bg: white;
+        --fg: #3d5320;
+        --links: var(--fg);
+
+        background-color: var(--bg);
+        color: var(--fg);
         font-family: serif;
         font-size: 100%;
       }
-      h1 {
-        font-size: 3rem;
-        text-align: center;
-        font-weight: normal;
-        margin-top: min(30vh, 400px);
+      :root,
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      #cover,
+      #nhan-n-my,
+      #links {
+        border: 1px solid red;
+      }
+
+      body {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas:
+          ". . . ."
+          "b b a a"
+          "c c a a"
+          ". . . .";
+        align-items: center;
+        justify-items: end;
+        padding: 2rem;
+      }
+      #cover {
+        grid-area: a;
+        width: 100%;
+        max-width: 40vw;
+        align-self: center;
+      }
+      #nhan-n-my {
+        grid-area: b;
+        justify-self: right;
+        font-size: 11vw;
+        font-family: "Meow Script", cursive;
+        align-self: end;
+      }
+      #links {
+        grid-area: c;
+        font-size: 2vw;
+        display: flex;
+        gap: 1em;
+        justify-self: top;
+        align-self: start;
+      }
+      #links a {
+        color: var(--links);
+        padding: 0.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "Oooh Baby", cursive;
+        font-weight: bold;
+        border: 0.2rem solid var(--links);
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+      }
+      #links a:hover {
+        background-color: var(--links);
+        color: var(--bg);
+      }
+      #links .map-marker {
+        font-size: 0.8em;
       }
     </style>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Meow+Script&family=Oooh+Baby&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on"
+    />
+    <!-- End Google font -->
+  </head>
+  <body>
+    <span id="nhan-n-my">Nhân & My</span>
+    <div id="links">
+      <a href="/">
+        <span class="material-symbols-outlined map-marker"> location_on </span>
+        Sài Gòn
+      </a>
+      <a href="/">
+        <span class="material-symbols-outlined map-marker"> location_on </span>
+        Hà Nội
+      </a>
+      <a href="/">Ảnh cưới</a>
+      <a href="/">Lời chúc</a>
+    </div>
+    <img id="cover" src="/cover.png" alt="" />
   </body>
 </html>
