@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Ảnh cưới | Nhân & My</title>
+    <title>Hà Nội | Nhân & My</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- TODO: self-host assets once design is finalized -->
@@ -32,6 +32,56 @@
 
     <link rel="stylesheet" href="/base.css" />
     <style>
+      nav {
+        font-size: 2rem;
+        padding: 0 1rem;
+        border-bottom: 2px solid var(--fg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--bg);
+        opacity: 0.9;
+      }
+      nav img {
+        height: 1.5rem;
+        display: inline-block;
+        vertical-align: center;
+      }
+      nav ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: inline-block;
+        float: right;
+      }
+      nav li {
+        display: inline-block;
+        margin-left: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        padding: 0.5rem;
+        border-radius: 2em;
+      }
+      nav a:hover {
+        /*
+        background-color: #e7870d;
+        color: var(--bg);
+      */
+      }
+      nav a:hover::before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 99em;
+        margin-top: 0.7em;
+        margin-left: -0.2em;
+        background-color: var(--orange);
+        display: inline-block;
+      }
+
       .season {
         padding: 1rem;
         padding-top: 4rem;

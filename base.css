@@ -1,3 +1,4 @@
+/* Global */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +34,7 @@ a {
   text-decoration: none;
 }
 
+/* (potentially) Shared Footer */
 footer {
   text-align: right;
   margin: 1rem;
@@ -43,4 +45,49 @@ footer {
 }
 footer a {
   text-decoration: underline;
+}
+
+/* Shared Navbar */
+nav {
+  font-size: 2rem;
+  padding: 0 1rem;
+  border-bottom: 2px solid var(--fg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  opacity: 0.9;
+}
+nav img {
+  height: 1.5rem;
+  display: inline-block;
+  vertical-align: center;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+  float: right;
+}
+nav li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+nav a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 2em;
+}
+nav a:hover::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 99em;
+  margin-top: 0.7em;
+  margin-left: -0.2em;
+  background-color: var(--orange);
+  display: inline-block;
 }
