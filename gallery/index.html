@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gallery | N.o.v.e.m.b.e.r.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TODO: self-host assets once design is finalized -->
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Meow+Script&family=Oooh+Baby&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on"
+    />
+    <!-- End Google font -->
+
+    <!-- Light Gallery -->
+    <script src="https://unpkg.com/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lightgallery@2.7.2/css/lightgallery-bundle.min.css"
+    />
+
+    <!-- End Light Gallery -->
+
+    <link rel="stylesheet" href="/base.css" />
+    <style>
+      nav {
+        font-size: 2rem;
+        padding: 0 1rem;
+        border-bottom: 2px solid var(--fg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--bg);
+        opacity: 0.9;
+      }
+      nav img {
+        height: 1.5rem;
+        display: inline-block;
+        vertical-align: center;
+      }
+      nav ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: inline-block;
+        float: right;
+      }
+      nav li {
+        display: inline-block;
+        margin-left: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        padding: 0.5rem;
+        border-radius: 2em;
+      }
+      nav a:hover {
+        /*
+        background-color: #e7870d;
+        color: var(--bg);
+      */
+      }
+      nav a:hover::before {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 99em;
+        margin-top: 0.7em;
+        margin-left: -0.2em;
+        background-color: var(--orange);
+        display: inline-block;
+      }
+
+      .season {
+        padding: 1rem;
+        padding-top: 4rem;
+        text-align: center;
+      }
+
+      .season a {
+        display: inline-block;
+        width: fit-content;
+        height: fit-content;
+      }
+
+      .season img {
+        max-width: 100%;
+        border-radius: 1rem;
+        display: inline-block;
+        vertical-align: middle; /* prevents unwanted space at bottom of <a> */
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-family: "Meow Script", cursive;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+      }
+
+      .gallery {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/"><img src="/cover.png" alt="" />Về nhà</a>
+      <ul>
+        <li><a href="#xuan">Xuân</a></li>
+        <li><a href="#ha">Hạ</a></li>
+        <li><a href="#thu">Thu</a></li>
+        <li><a href="#dong">Đông</a></li>
+        <li><a href="#cuoi">Đám cưới</a></li>
+      </ul>
+    </nav>
+
+    <div class="season" id="xuan">
+      <h1>*Xuân *</h1>
+      <div class="gallery" id="xuan-gallery">
+        <a href="xuan/003.JPG"><img src="xuan/003.JPG.thumb.jpg" /></a>
+        <a href="xuan/024.JPG"><img src="xuan/024.JPG.thumb.jpg" /></a>
+        <a href="xuan/000003.JPG"><img src="xuan/000003.JPG.thumb.jpg" /></a>
+        <a href="xuan/021.JPG"><img src="xuan/021.JPG.thumb.jpg" /></a>
+        <a href="xuan/000013.JPG"><img src="xuan/000013.JPG.thumb.jpg" /></a>
+        <a href="xuan/029.JPG"><img src="xuan/029.JPG.thumb.jpg" /></a>
+        <a href="xuan/004.JPG"><img src="xuan/004.JPG.thumb.jpg" /></a>
+        <a href="xuan/005.JPG"><img src="xuan/005.JPG.thumb.jpg" /></a>
+        <a href="xuan/019.JPG"><img src="xuan/019.JPG.thumb.jpg" /></a>
+        <a href="xuan/001.JPG"><img src="xuan/001.JPG.thumb.jpg" /></a>
+        <a href="xuan/000039.JPG"><img src="xuan/000039.JPG.thumb.jpg" /></a>
+        <a href="xuan/000015.JPG"><img src="xuan/000015.JPG.thumb.jpg" /></a>
+        <a href="xuan/002.JPG"><img src="xuan/002.JPG.thumb.jpg" /></a>
+        <a href="xuan/017.JPG"><img src="xuan/017.JPG.thumb.jpg" /></a>
+        <a href="xuan/000014.JPG"><img src="xuan/000014.JPG.thumb.jpg" /></a>
+        <a href="xuan/022.JPG"><img src="xuan/022.JPG.thumb.jpg" /></a>
+        <a href="xuan/000004.JPG"><img src="xuan/000004.JPG.thumb.jpg" /></a>
+        <a href="xuan/000009.JPG"><img src="xuan/000009.JPG.thumb.jpg" /></a>
+        <a href="xuan/000002.JPG"><img src="xuan/000002.JPG.thumb.jpg" /></a>
+        <a href="xuan/020.JPG"><img src="xuan/020.JPG.thumb.jpg" /></a>
+        <a href="xuan/012.JPG"><img src="xuan/012.JPG.thumb.jpg" /></a>
+        <a href="xuan/009.JPG"><img src="xuan/009.JPG.thumb.jpg" /></a>
+        <a href="xuan/031.JPG"><img src="xuan/031.JPG.thumb.jpg" /></a>
+        <a href="xuan/011.JPG"><img src="xuan/011.JPG.thumb.jpg" /></a>
+        <a href="xuan/000006.JPG"><img src="xuan/000006.JPG.thumb.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="season" id="ha">
+      <h1>*Hạ *</h1>
+      <div class="gallery" id="ha-gallery">
+        <a href="ha/000029.JPG"><img src="ha/000029.JPG.thumb.jpg" /></a>
+        <a href="ha/000026.JPG"><img src="ha/000026.JPG.thumb.jpg" /></a>
+        <a href="ha/000021.JPG"><img src="ha/000021.JPG.thumb.jpg" /></a>
+        <a href="ha/000022.JPG"><img src="ha/000022.JPG.thumb.jpg" /></a>
+        <a href="ha/000032.JPG"><img src="ha/000032.JPG.thumb.jpg" /></a>
+        <a href="ha/000027.JPG"><img src="ha/000027.JPG.thumb.jpg" /></a>
+        <a href="ha/000035.JPG"><img src="ha/000035.JPG.thumb.jpg" /></a>
+        <a href="ha/000036.JPG"><img src="ha/000036.JPG.thumb.jpg" /></a>
+        <a href="ha/000031.JPG"><img src="ha/000031.JPG.thumb.jpg" /></a>
+        <a href="ha/000028.JPG"><img src="ha/000028.JPG.thumb.jpg" /></a>
+        <a href="ha/000034.JPG"><img src="ha/000034.JPG.thumb.jpg" /></a>
+        <a href="ha/000044.JPG"><img src="ha/000044.JPG.thumb.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="season" id="thu">
+      <h1>*Thu *</h1>
+      <div class="gallery" id="thu-gallery">
+        <a href="thu/000050.JPG"><img src="thu/000050.JPG.thumb.jpg" /></a>
+        <a href="thu/000045.JPG"><img src="thu/000045.JPG.thumb.jpg" /></a>
+        <a href="thu/000047.JPG"><img src="thu/000047.JPG.thumb.jpg" /></a>
+        <a href="thu/000041.JPG"><img src="thu/000041.JPG.thumb.jpg" /></a>
+        <a href="thu/000053.JPG"><img src="thu/000053.JPG.thumb.jpg" /></a>
+        <a href="thu/000056.JPG"><img src="thu/000056.JPG.thumb.jpg" /></a>
+        <a href="thu/000048.JPG"><img src="thu/000048.JPG.thumb.jpg" /></a>
+        <a href="thu/000055.JPG"><img src="thu/000055.JPG.thumb.jpg" /></a>
+        <a href="thu/000044.JPG"><img src="thu/000044.JPG.thumb.jpg" /></a>
+        <a href="thu/000052.JPG"><img src="thu/000052.JPG.thumb.jpg" /></a>
+        <a href="thu/000043.JPG"><img src="thu/000043.JPG.thumb.jpg" /></a>
+      </div>
+    </div>
+
+    <div class="season" id="dong">
+      <h1>*Đông *</h1>
+      <div class="gallery" id="dong-gallery">
+        <a href="dong/000045.JPG"><img src="dong/000045.JPG.thumb.jpg" /></a>
+        <a href="dong/000060.JPG"><img src="dong/000060.JPG.thumb.jpg" /></a>
+        <a href="dong/000040.JPG"><img src="dong/000040.JPG.thumb.jpg" /></a>
+        <a href="dong/000003.JPG"><img src="dong/000003.JPG.thumb.jpg" /></a>
+        <a href="dong/000041.JPG"><img src="dong/000041.JPG.thumb.jpg" /></a>
+        <a href="dong/000013.JPG"><img src="dong/000013.JPG.thumb.jpg" /></a>
+        <a href="dong/000062.JPG"><img src="dong/000062.JPG.thumb.jpg" /></a>
+        <a href="dong/000019.JPG"><img src="dong/000019.JPG.thumb.jpg" /></a>
+        <a href="dong/000039.JPG"><img src="dong/000039.JPG.thumb.jpg" /></a>
+        <a href="dong/000017.JPG"><img src="dong/000017.JPG.thumb.jpg" /></a>
+        <a href="dong/000058.JPG"><img src="dong/000058.JPG.thumb.jpg" /></a>
+        <a href="dong/000004.JPG"><img src="dong/000004.JPG.thumb.jpg" /></a>
+        <a href="dong/000043.JPG"><img src="dong/000043.JPG.thumb.jpg" /></a>
+        <a href="dong/000005.JPG"><img src="dong/000005.JPG.thumb.jpg" /></a>
+        <a href="dong/000038.JPG"><img src="dong/000038.JPG.thumb.jpg" /></a>
+        <a href="dong/000006.JPG"><img src="dong/000006.JPG.thumb.jpg" /></a>
+      </div>
+    </div>
+
+    <script>
+      ["xuan", "ha", "thu", "dong"].forEach((season) => {
+        lightGallery(document.getElementById(`${season}-gallery`), {
+          plugins: [lgThumbnail],
+          speed: 500,
+        });
+      });
+    </script>
+
+    <footer>
+      <p>
+        <a href="https://github.com/nhanb/november.moe">Handcrafted</a>
+        with love and care.
+      </p>
+      <p>Works best on actual computers.</p>
+      <p style="color: var(--bg)">Mobile users don't deserve nice things.</p>
+    </footer>
+  </body>
+</html>

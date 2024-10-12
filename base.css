@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg: cornsilk;
+  --fg: #3d5320;
+  --links: var(--fg);
+  --orange: #e7870d;
+
+  background-color: var(--bg);
+  color: var(--fg);
+
+  font-family: "Oooh Baby", cursive;
+  font-size: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  text-align: right;
+  margin: 1rem;
+  margin-top: 3rem;
+  font-family: monospace;
+  font-size: 0.7rem;
+  opacity: 0.2;
+}
+footer a {
+  text-decoration: underline;
+}
