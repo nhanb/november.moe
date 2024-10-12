@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: cornsilk;
   --fg: #3d5320;
