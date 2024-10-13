@@ -1,1 +1,3 @@
 scratch.txt
+*.pyc
+*.db

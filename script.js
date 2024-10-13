@@ -54,3 +54,16 @@ function initCountdown(selector, targetDate) {
     setInterval(update, 1000);
   });
 }
+
+const WISH_API_URL = "http://localhost:9000";
+
+function submitWish({ name, content }) {
+  return fetch(WISH_API_URL, {
+    method: "POST",
+    body: JSON.stringify({ name, content }),
+  }).then((resp) => resp.json());
+}
+
+function getWishes() {
+  return fetch(WISH_API_URL, {}).then((resp) => resp.json());
+}
