@@ -34,6 +34,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a[target="_blank"]::after {
+  content: "↗";
+}
 
 /* (potentially) Shared Footer */
 
@@ -98,4 +101,19 @@ nav a:hover::before {
   nav ul {
     display: none;
   }
+}
+
+/* Countdown */
+
+.countdown {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+.countdown .component {
+  display: flex;
+  flex-direction: column;
+}
+.countdown .number {
+  font-size: 3em;
 }

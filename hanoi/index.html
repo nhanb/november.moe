@@ -31,6 +31,10 @@
     <!-- End Light Gallery -->
 
     <link rel="stylesheet" href="/base.css" />
+    <script src="/script.js"></script>
+    <script>
+      initCountdown("#countdown", Date.parse("2024-11-15T00:00:00.000+07:00"));
+    </script>
     <style>
       /* layout */
 
@@ -47,24 +51,37 @@
       main {
         display: flex;
         height: 100%;
+        font-family: monospace;
+        text-align: center;
       }
       #hanoi,
       #anhoi,
       #baohy,
       #fourth {
         flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        padding-top: 20%;
+
+        min-height: 20rem;
+      }
+
+      #hanoi .countdown {
+        margin: auto;
+        margin-top: 2rem;
       }
 
       #baohy {
-        display: flex;
-        flex-direction: column;
       }
       #baohy iframe {
+        margin: auto;
         margin-top: 2rem;
         height: 100%;
         width: 100%;
-        max-height: 45rem;
-        max-width: 25rem;
+        max-height: 15rem;
+        max-width: 30rem;
       }
 
       footer {
@@ -77,21 +94,20 @@
         main {
           flex-direction: column;
         }
+        #hanoi,
+        #anhoi,
+        #baohy,
+        #fourth {
+          padding-top: 3rem;
+        }
       }
 
       /* look & feel */
-      main {
+      h1 {
+        font-family: "Oooh Baby", cursive;
       }
       h1 {
-        margin-top: 2rem;
         font-size: 4rem;
-      }
-      h2 {
-        margin-top: 2rem;
-        font-size: 3rem;
-      }
-      time {
-        font-weight: bold;
       }
       li {
         margin-left: 4rem;
@@ -99,8 +115,7 @@
 
       main {
         color: white;
-        text-shadow: 2px 2px 5px black;
-        font-size: 2rem;
+        text-shadow: 1px 1px 5px black;
         border-bottom: 2px solid var(--fg);
       }
       main a {
@@ -120,17 +135,22 @@
       #baohy {
         background-image: url(/gallery/thu/000052.JPG);
       }
-      #baohy iframe {
-        border-radius: 3rem;
-        border: none;
-        filter: invert(90%);
-      }
       #fourth {
         background-image: url(/gallery/dong/000003.JPG);
+      }
+      #fourth strong {
+        color: var(--orange);
+        text-shadow: 1px 1px 5px cornsilk;
       }
 
       footer {
         opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
@@ -143,48 +163,53 @@
       <div id="hanoi">
         <h1>Hà Nội</h1>
         <time>Ngày 15/11/2024</time>
+        <div id="countdown"></div>
       </div>
 
       <div id="anhoi">
-        <h2>Lễ ăn hỏi</h2>
+        <h1>Lễ ăn hỏi</h1>
         <time>09:00 tại nhà My</time>
       </div>
 
       <div id="baohy">
-        <h2>Tiệc báo hỷ</h2>
+        <h1>Tiệc báo hỷ</h1>
         <address>
-          <p>Hội trường A, Trung tâm Hội nghị 37 Hùng Vương</p>
-          <p>Số 37 Hùng Vương, quận Ba Đình, Thành phố Hà Nội</p>
+          <p>Hội trường A, Trung tâm Hội nghị 37&nbsp;Hùng&nbsp;Vương</p>
+          <p>Số 37 Hùng Vương, quận Ba Đình, Thành&nbsp;phố&nbsp;Hà&nbsp;Nội</p>
         </address>
         <time>
           <p>Giờ đón khách: 17:00</p>
           <p>Giờ khai tiệc: 18:00</p>
         </time>
 
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9672121200774!2d105.83180727699514!3d21.03399788759525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba1f135ec53%3A0x2f48e98ea3e53266!2zVHJ1bmcgdMOibSBI4buZaSBuZ2jhu4sgMzcgSMO5bmcgVsawxqFuZw!5e0!3m2!1sen!2s!4v1728752332685!5m2!1sen!2s"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <a
+          style="margin-top: 1rem"
+          href="https://maps.app.goo.gl/MwFEHb1FcHrfxjav8"
+          target="_blank"
+          >Bản đồ trên Google Maps</a
+        >
       </div>
 
       <div id="fourth">
-        <h2>Tiệc báo hỷ</h2>
-        <address>
-          <p>Hội trường A, Trung tâm Hội nghị 37 Hùng Vương</p>
-          <p>Số 37 Hùng Vương, quận Ba Đình, Thành phố Hà Nội</p>
-        </address>
-        <time>
-          <p>Giờ đón khách: 17:00</p>
-          <p>Giờ khai tiệc: 18:00</p>
-        </time>
+        <h1>Khác</h1>
+        <p><strong>Không có dress code</strong> — mặc đẹp là được!</p>
+        <p>
+          <strong>Gửi lời chúc</strong> cho My và Nhân
+          <a href="/">ở đây</a> nha.
+        </p>
+        <p>
+          <strong>Muốn xem ảnh cưới</strong> thì
+          <a href="/gallery/">vào đây</a>.
+        </p>
+        <p style="margin-top: 1rem">Cảm ơn mọi người!</p>
       </div>
     </main>
 
     <footer>
       <p>
-        <a href="https://github.com/nhanb/november.moe">Handcrafted</a>
+        <a href="https://github.com/nhanb/november.moe" target="_blank"
+          >Handcrafted</a
+        >
         with reasonable care.
       </p>
       <p>
