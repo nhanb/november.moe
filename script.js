@@ -31,19 +31,19 @@ function initCountdown(selector, targetDate) {
         .padStart(2, "0");
 
       el.innerHTML = `
-<span class="component">
+<span class="component" title="days">
   <span class="number">${days}</span>
   <span class="text">ngày</span>
 </span>
-<span class="component">
+<span class="component" title="hours">
   <span class="number">${hours}</span>
   <span class="text">giờ</span>
 </span>
-<span class="component">
+<span class="component" title="minutes">
   <span class="number">${minutes}</span>
   <span class="text">phút</span>
 </span>
-<span class="component">
+<span class="component" title="seconds">
   <span class="number">${seconds}</span>
   <span class="text">giây</span>
 </span>
