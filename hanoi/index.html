@@ -32,17 +32,58 @@
 
     <link rel="stylesheet" href="/base.css" />
     <style>
+      /* layout */
+
       body {
-        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
       }
+      nav {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        text-shadow: 1px 1px 5px white;
+      }
+
       main {
-        margin: 1rem;
-        margin-top: 4rem;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1440px;
+        display: flex;
+        height: 100%;
+      }
+      #hanoi,
+      #anhoi,
+      #baohy,
+      #fourth {
+        flex-grow: 1;
+      }
+
+      #baohy {
+        display: flex;
+        flex-direction: column;
+      }
+      #baohy iframe {
+        margin-top: 2rem;
+        height: 100%;
+        width: 100%;
+        max-height: 45rem;
+        max-width: 25rem;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+      }
+
+      @media (max-width: 1300px) {
+        main {
+          flex-direction: column;
+        }
+      }
+
+      /* look & feel */
+      main {
       }
       h1 {
+        margin-top: 2rem;
         font-size: 4rem;
       }
       h2 {
@@ -56,89 +97,55 @@
         margin-left: 4rem;
       }
 
+      main {
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--fg);
+      }
       main a {
         text-decoration: underline;
       }
-
-      #baohy {
-        display: grid;
-        gap: 2rem;
-        grid-template:
-          "a d"
-          "b d"
-          "c d";
-        align-items: stretch;
-        justify-items: end;
-        grid-template-rows: 1fr 1fr 2fr;
-        text-align: right;
+      main > div {
+        background-size: cover;
+        padding: 1rem;
+        padding-top: 3rem;
       }
-      #baohy h2 {
-        grid-area: a;
+      #hanoi {
+        background-image: url(/gallery/xuan/000003.JPG);
       }
-      #baohy address {
-        grid-area: b;
-      }
-      #baohy time {
-        grid-area: c;
-        font-weight: normal;
-      }
-      #baohy iframe {
-        grid-area: d;
-        text-align: left;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
       #anhoi {
-        display: grid;
-        gap: 2rem;
-        grid-template:
-          "a b"
-          "a c";
-        align-items: start;
-        justify-items: start;
-        grid-template-columns: 1fr 1fr;
-        margin: 3rem 0;
+        background-image: url(/gallery/ha/000026.JPG);
       }
-      #anhoi img {
-        grid-area: a;
-        width: 100%;
-      }
-      #anhoi h2 {
-        grid-area: b;
-      }
-      #anhoi time {
-        grid-area: c;
+      #baohy {
+        background-image: url(/gallery/thu/000052.JPG);
       }
       #baohy iframe {
-        grid-area: d;
-        text-align: left;
-        width: 100%;
-        height: 100%;
+        border-radius: 3rem;
+        border: none;
+        filter: invert(90%);
+      }
+      #fourth {
+        background-image: url(/gallery/dong/000003.JPG);
+      }
+
+      footer {
+        opacity: 1;
       }
     </style>
   </head>
   <body>
     <nav>
       <a href="/" title="Home"><img src="/cover.png" alt="Home" />Về nhà</a>
-      <ul>
-        <li><a href="#xuan" title="Spring">Xuân</a></li>
-        <li><a href="#ha" title="Summer">Hạ</a></li>
-        <li><a href="#thu" title="Autumn">Thu</a></li>
-        <li><a href="#dong" title="Winter">Đông</a></li>
-        <li><a href="#cuoi" title="Wedding photos">Đám cưới</a></li>
-      </ul>
     </nav>
 
     <main>
-      <div style="text-align: center">
+      <div id="hanoi">
         <h1>Hà Nội</h1>
         <time>Ngày 15/11/2024</time>
       </div>
 
       <div id="anhoi">
-        <img src="/gallery/xuan/000013.JPG" />
         <h2>Lễ ăn hỏi</h2>
         <time>09:00 tại nhà My</time>
       </div>
@@ -162,20 +169,33 @@
         ></iframe>
       </div>
 
-      <h2>Các thông tin khác</h2>
-      <ul>
-        <li><a href="/chuc/">Gửi lời chúc</a></li>
-        <li><a href="/gallery/">Xem ảnh cưới</a></li>
-      </ul>
+      <div id="fourth">
+        <h2>Tiệc báo hỷ</h2>
+        <address>
+          <p>Hội trường A, Trung tâm Hội nghị 37 Hùng Vương</p>
+          <p>Số 37 Hùng Vương, quận Ba Đình, Thành phố Hà Nội</p>
+        </address>
+        <time>
+          <p>Giờ đón khách: 17:00</p>
+          <p>Giờ khai tiệc: 18:00</p>
+        </time>
+      </div>
     </main>
 
     <footer>
       <p>
         <a href="https://github.com/nhanb/november.moe">Handcrafted</a>
-        with love and care.
+        with reasonable care.
       </p>
-      <p>Works best on actual computers.</p>
-      <p style="color: var(--bg)">Mobile users don't deserve nice things.</p>
+      <p>
+        Works best on
+        <a href="https://www.youtube.com/watch?v=DgJS2tQPGKQ" target="_blank"
+          >actual computers</a
+        >.
+      </p>
+      <p style="color: rgba(0, 0, 0, 0)">
+        Mobile users don't deserve nice things.
+      </p>
     </footer>
   </body>
 </html>
