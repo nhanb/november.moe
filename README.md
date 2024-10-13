@@ -17,7 +17,14 @@ on mobile, which brings us to...
 Though it should look presentable on mobile, I refuse to bend over backwards
 for the Eternal September device.
 
-# Credit
+# Credits
 
 Steve Ballmer clip lifted from the Blue OS Museum channel:
 <https://www.youtube.com/watch?v=DgJS2tQPGKQ>
+
+[google-webfonts-helper](https://gwfh.mranftl.com/fonts) has been very, uh,
+helpful.
+
+[lightGallery](https://www.lightgalleryjs.com/) was clean and pretty much
+plug-n-play. I'd gladly buy a commercial license if I ever need it in a
+commercial project.
