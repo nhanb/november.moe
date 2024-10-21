@@ -19,6 +19,8 @@ for the Eternal September device.
 
 # Credits
 
+Illustration & design: <https://www.facebook.com/meexway/>
+
 Steve Ballmer clip lifted from the Blue OS Museum channel:
 <https://www.youtube.com/watch?v=DgJS2tQPGKQ>
 
