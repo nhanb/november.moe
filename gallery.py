@@ -16,7 +16,7 @@ with open("scratch.txt", "w") as scratch:
 <div class="gallery" id="{dir}-gallery">
 """
         )
-        for pic in (gallery / dir).glob("*.JPG"):
+        for pic in (gallery / dir).glob("*.jpg"):
             file = pic.name
             scratch.write(
                 f'<a href="{dir}/{file}"><img src="{dir}/{file}.thumb.jpg"/></a>\n'
