@@ -57,7 +57,7 @@ nav {
   font-size: 2rem;
   padding: 0 1rem;
   border-bottom: 2px solid var(--fg);
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
