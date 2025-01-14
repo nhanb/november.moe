@@ -3,12 +3,7 @@ from pathlib import Path
 with open("scratch.txt", "w") as scratch:
     gallery = Path("./gallery")
 
-    for dir, season in (
-        ("xuan", "Xuân"),
-        ("ha", "Hạ"),
-        ("thu", "Thu"),
-        ("dong", "Đông"),
-    ):
+    for dir, season in (("cuoi", "Đám cưới"),):
         scratch.write(
             f"""\
 <div class="season" id="{dir}">
@@ -16,7 +11,9 @@ with open("scratch.txt", "w") as scratch:
 <div class="gallery" id="{dir}-gallery">
 """
         )
-        for pic in (gallery / dir).glob("*.jpg"):
+        for pic in (gallery / dir).glob("*.*"):
+            if pic.name.endswith("thumb.jpg"):
+                continue
             file = pic.name
             scratch.write(
                 f'<a href="{dir}/{file}"><img src="{dir}/{file}.thumb.jpg"/></a>\n'
